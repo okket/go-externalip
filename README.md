@@ -1,7 +1,6 @@
 # go-externalip
 
-IPv4 & NAT-PMP only. 
-I use this instead of ```curl http://ipv4.myexternalip.com/raw``` for ddclient.
+Warning: Quick hack. IPv4 & NAT-PMP only.  I use this instead of ```curl http://ipv4.myexternalip.com/raw``` for ddclient.
 
 Usage:
 ```
