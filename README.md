@@ -1,10 +1,6 @@
 # go-externalip
 
-Warning: Quick hack. IPv4 & NAT-PMP only. I use this for ddclient instead of 
-
-```
-curl http://ipv4.myexternalip.com/raw
-```
+Warning: Quick hack. IPv4 & NAT-PMP only. For use in ```ddclient.conf``` or similar.
 
 Usage:
 ```
@@ -13,4 +9,11 @@ $ go-externalip
 11.22.33.44
 ````
 
-For details see https://github.com/jackpal/go-nat-pmp
+Details see https://github.com/jackpal/go-nat-pmp
+
+Web service alternative:
+
+```
+$ curl http://ipv4.myexternalip.com/raw
+11.22.33.44
+```
