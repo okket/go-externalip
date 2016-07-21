@@ -1,19 +1,23 @@
 package main
 
-import natpmp "github.com/jackpal/go-nat-pmp"
-import "fmt"
+import (
+		"github.com/jackpal/gateway"
+		natpmp "github.com/jackpal/go-nat-pmp"
+		"fmt"
+)
 
 func main() {
-	client, err := natpmp.NewClientForDefaultGateway()
+	gatewayIP, err := gateway.DiscoverGateway()
 	if err != nil {
 		// fmt.Print("Couldn't determine default gateway\n")
-		return
+	    return
 	}
 
+	client := natpmp.NewClient(gatewayIP)
 	response, err := client.GetExternalAddress()
 	if err != nil {
 		// fmt.Print("No answer from gateway\n")
-		return
+	    return
 	}
 
 	addr := response.ExternalIPAddress
